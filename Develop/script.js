@@ -3,7 +3,8 @@ var startBTN = document.getElementById("start");
 var questiontititle = document.getElementById("question-title");
 var answercontainer = document.getElementById("choices")
 var nextBTN = document.getElementById("nextBTN");
-
+var startcontainer = document.querySelector(".start")
+var questionscontainer = document.getElementById("questions")
 var questions = [
     {
         question:"1+1",
@@ -37,32 +38,51 @@ function settimer () {
 
 startBTN
 .addEventListener("click",function(){
-    settimer()  
+    settimer()
+    startcontainer.classList.add("hide")  
+    questionscontainer.classList.remove("hide")
+    firstquestion(questionindex)
 })
-function firstquestion () {
+function firstquestion (Q) {
+    answercontainer.textContent=""
     for (var i =0; i<questions.length;i++) {
-        console.log(questions[i].question)
-        console.log(questions[i].answers)
-        questiontititle.textContent = (questions[i].question)
-        var answerlist = questions[i].answers
+        console.log(questions[Q].question)
+        console.log(questions[Q].answers)
+        questiontititle.textContent = (questions[Q].question)
+        var answerlist = questions[Q].answers
     }
-    for (var i =0; i<4;i++) {
+    answerlist.forEach(function(ANS){
         var answerBTN = document.createElement ("button")
-        answerBTN.textContent = answerlist[i]
+        answerBTN.textContent = ANS
         answercontainer.appendChild (answerBTN)
+        answerBTN.addEventListener ("click",function(){
+            checkcorrect(answerBTN.textContent)
+        })
+    })
+    
         
 
-
-
-    }
-    answerBTN.addEventListener ("click",function(){
-        checkcorrect(answerBTN.textContent)
-    })
+    
 }
 
 function checkcorrect(A) {
     if (A===questions[questionindex].correctanswer) {
         console.log ("correct")
     }
+    questionindex++
+    nextquestion(questionindex)
 }
-firstquestion()
+function nextquestion(Q) {
+    nextBTN.addEventListener("click",function(){
+        if (Q>= questions.length){
+            done()
+        } else {
+            firstquestion(Q)
+        }
+    })
+}
+var endscreen=document.getElementById("end-screen")
+function done (){
+    questionscontainer.classList.add("hide")
+endscreen.classList.remove("hide")
+}
