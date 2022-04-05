@@ -7,19 +7,19 @@ var startcontainer = document.querySelector(".start")
 var questionscontainer = document.getElementById("questions")
 var questions = [
     {
-        question:"1+1",
-        answers: ["2","3","4","5"], 
-        correctanswer: "2"
+        question:"Javascript is an _________ language?",
+        answers: ["Object-oriented","Object-Based","Procedural","Noneof the above"], 
+        correctanswer: "Object-oriented"
     },
     {
-        question:"1+2",
-        answers: ["2","3","4","6"], 
-        correctanswer: "3"
+        question:"commonly used typed of data do not incliude?",
+        answers: ["","","",""], 
+        correctanswer: ""
     },
     {
-        question:"1+3",
-        answers: ["2","3","4","7"], 
-        correctanswer: "4"
+        question:"When is the local storage data cleared?",
+        answers: ["No expiration time","On page reload","On browser close","On computer restart"], 
+        correctanswer: "No expiration time"
     },
 ]
 var questionindex = 0;
