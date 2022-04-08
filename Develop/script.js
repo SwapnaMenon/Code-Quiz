@@ -5,23 +5,28 @@ var answercontainer = document.getElementById("choices")
 var nextBTN = document.getElementById("nextBTN");
 var startcontainer = document.querySelector(".start")
 var questionscontainer = document.getElementById("questions")
+// Vriable for questions //
 var questions = [
+    // Question 1 //
     {
         question:"Javascript is an _________ language?",
-        answers: ["Object-oriented","Object-Based","Procedural","Noneof the above"], 
-        correctanswer: "Object-oriented"
+        answers: ["A) Object-oriented","B) Object-Based","C) Procedural","D) Noneof the above"], 
+        correctanswer: "A) Object-oriented"
     },
+    // Question 2 //
     {
-        question:"commonly used typed of data do not incliude?",
-        answers: ["","","",""], 
-        correctanswer: ""
+        question:" A very useful tool used during development and debugging for printing content to the debugger is??",
+        answers: ["A)terminal/Bash","B)For Loops","C) Javascript","D) Console.log"], 
+        correctanswer: "C) Javascript"
     },
+    // Question 3 //
     {
         question:"When is the local storage data cleared?",
-        answers: ["No expiration time","On page reload","On browser close","On computer restart"], 
-        correctanswer: "No expiration time"
+        answers: ["A) On computer restart","B) On page reload","C) On browser close","D) No expiration time"], 
+        correctanswer: "D) No expiration time"
     },
 ]
+// Timer variable //
 var questionindex = 0;
 var time = 60;
 var timeelapsed 
@@ -60,8 +65,6 @@ function firstquestion (Q) {
         })
     })
     
-        
-
     
 }
 
