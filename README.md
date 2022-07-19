@@ -25,9 +25,13 @@ THEN I can save my initials and score
 # Mock-Up 
 
 ## Walk through Video
+https://watch.screencastify.com/v/nuSu2QCgXLZ6QKTwkZbS
+
+![demo](./Assets/Images/Code-Quiz.mp4)
+
 
 ## Screenshots
-
+![demo](./Assets/Images/Code-Quiz.png)
 
 # Links 
 GitHub Repo: https://github.com/SwapnaMenon/Code-Quiz
