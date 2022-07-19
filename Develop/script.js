@@ -5,6 +5,8 @@ var answercontainer = document.getElementById("choices")
 var nextBTN = document.getElementById("nextBTN");
 var startcontainer = document.querySelector(".start")
 var questionscontainer = document.getElementById("questions")
+var score = document.querySelector("#scores");
+var reset = document.querySelector("#Rest");
 var questions = [
     // Question 1 //
     {
@@ -86,3 +88,9 @@ function done (){
 endscreen.classList.remove("hide")
 }
 console.log("Quiz Complete")
+
+reset.addEventListener("click", function () {
+    localStorage.reset();
+    location.reload();
+});
+
