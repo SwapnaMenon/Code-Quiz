@@ -25,7 +25,7 @@ body {
   }
   .feedback {
     font-style: italic;
-    font-size: 120%;
+    font-size: 150%;
     margin-top: 20px;
     padding-top: 10px;
     color: gray;
@@ -53,7 +53,7 @@ body {
     cursor: pointer;
     font-family: "san-serif", italic;
     font-size: 100%;
-    background-color: teal;
+    background-color: grey;
     border-radius: 5px;
     padding: 2px 10px;
     color: white;

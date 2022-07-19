@@ -1,32 +1,30 @@
-var timer = document.getElementById("time"); //connected time element inside//
+var timer = document.getElementById("time"); 
 var startBTN = document.getElementById("start");
 var questiontititle = document.getElementById("question-title");
 var answercontainer = document.getElementById("choices")
 var nextBTN = document.getElementById("nextBTN");
 var startcontainer = document.querySelector(".start")
 var questionscontainer = document.getElementById("questions")
-// Vriable for questions //
 var questions = [
     // Question 1 //
     {
-        question:"Javascript is an _________ language?",
+        question:"Question 1:Javascript is an _________ language?",
         answers: ["A) Object-oriented","B) Object-Based","C) Procedural","D) Noneof the above"], 
         correctanswer: "A) Object-oriented"
     },
     // Question 2 //
     {
-        question:" A very useful tool used during development and debugging for printing content to the debugger is??",
+        question:" Question 2: A very useful tool used during development and debugging for printing content to the debugger is??",
         answers: ["A)terminal/Bash","B)For Loops","C) Javascript","D) Console.log"], 
         correctanswer: "C) Javascript"
     },
     // Question 3 //
     {
-        question:"When is the local storage data cleared?",
+        question:"Question 3: When is the local storage data cleared?",
         answers: ["A) On computer restart","B) On page reload","C) On browser close","D) No expiration time"], 
         correctanswer: "D) No expiration time"
     },
 ]
-// Timer variable //
 var questionindex = 0;
 var time = 60;
 var timeelapsed 
@@ -63,9 +61,7 @@ function firstquestion (Q) {
         answerBTN.addEventListener ("click",function(){
             checkcorrect(answerBTN.textContent)
         })
-    })
-    
-    
+    })     
 }
 
 function checkcorrect(A) {
@@ -89,3 +85,4 @@ function done (){
     questionscontainer.classList.add("hide")
 endscreen.classList.remove("hide")
 }
+console.log("Quiz Complete")
